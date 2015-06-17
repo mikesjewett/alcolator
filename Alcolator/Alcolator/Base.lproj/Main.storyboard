@@ -44,6 +44,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hkC-s3-na0" firstAttribute="centerX" secondItem="LHS-vV-GJu" secondAttribute="centerX" id="2Jw-f4-pqx"/>
+                            <constraint firstItem="YYD-w4-LOO" firstAttribute="width" secondItem="w3a-Nt-8i3" secondAttribute="width" id="D4a-wQ-f5X"/>
                             <constraint firstItem="LHS-vV-GJu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QOf-lh-LeQ"/>
                             <constraint firstItem="YYD-w4-LOO" firstAttribute="top" secondItem="w3a-Nt-8i3" secondAttribute="bottom" constant="16" id="Wa5-o9-2Bq"/>
                             <constraint firstItem="LHS-vV-GJu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="apa-4j-Jms"/>
