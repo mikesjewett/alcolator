@@ -87,7 +87,7 @@
         <!--Whiskey View Controller-->
         <scene sceneID="770-UE-acx">
             <objects>
-                <viewController id="U3J-cb-WqE" customClass="WhiskeyViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhiskeyViewController" id="U3J-cb-WqE" customClass="WhiskeyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lYv-a0-fAz"/>
                         <viewControllerLayoutGuide type="bottom" id="Wtf-RF-8ax"/>
