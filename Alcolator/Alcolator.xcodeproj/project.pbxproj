@@ -14,6 +14,7 @@
 		277A2FB11B2F4EE5008B7F38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277A2FB01B2F4EE5008B7F38 /* Images.xcassets */; };
 		277A2FB41B2F4EE5008B7F38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277A2FB21B2F4EE5008B7F38 /* LaunchScreen.xib */; };
 		277A2FC01B2F4EE5008B7F38 /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277A2FBF1B2F4EE5008B7F38 /* AlcolatorTests.m */; };
+		277A2FCE1B32EFC3008B7F38 /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277A2FCD1B32EFC3008B7F38 /* WhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		277A2FB91B2F4EE5008B7F38 /* AlcolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277A2FBE1B2F4EE5008B7F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277A2FBF1B2F4EE5008B7F38 /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
+		277A2FCC1B32EFC3008B7F38 /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
+		277A2FCD1B32EFC3008B7F38 /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				277A2FB01B2F4EE5008B7F38 /* Images.xcassets */,
 				277A2FB21B2F4EE5008B7F38 /* LaunchScreen.xib */,
 				277A2FA31B2F4EE5008B7F38 /* Supporting Files */,
+				277A2FCC1B32EFC3008B7F38 /* WhiskeyViewController.h */,
+				277A2FCD1B32EFC3008B7F38 /* WhiskeyViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277A2FAC1B2F4EE5008B7F38 /* ViewController.m in Sources */,
+				277A2FCE1B32EFC3008B7F38 /* WhiskeyViewController.m in Sources */,
 				277A2FA91B2F4EE5008B7F38 /* AppDelegate.m in Sources */,
 				277A2FA61B2F4EE5008B7F38 /* main.m in Sources */,
 			);
@@ -418,6 +424,7 @@
 				277A2FC51B2F4EE5008B7F38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		277A2FC61B2F4EE5008B7F38 /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				277A2FC81B2F4EE5008B7F38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
