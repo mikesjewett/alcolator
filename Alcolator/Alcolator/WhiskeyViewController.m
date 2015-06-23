@@ -14,11 +14,16 @@
 
 @implementation WhiskeyViewController
 
-- (void)buttonPressed:(UIButton *)sender;
-{
+- (IBAction)sliderValueDidChange:(UISlider *)sender {
+    NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
     
-    int numberOfBeers = self.beerCountSlider.value;
+    float glasses = [self numberOfWhiskeyShotsForEquivalentAlcoholAmount:sender.value];
+    
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) glasses]];
+}
+
+-(float)numberOfWhiskeyShotsForEquivalentAlcoholAmount:(int)numberOfBeers {
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
     
     float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
@@ -29,7 +34,17 @@
     float alcoholPercentageOfWhiskey = 0.4;  // 40% is average
     
     float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
-    float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
+    
+    return ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
+}
+
+- (void)buttonPressed:(UIButton *)sender;
+{
+    [self.beerPercentTextField resignFirstResponder];
+    
+    int numberOfBeers = self.beerCountSlider.value;
+    
+    float glasses = [self numberOfWhiskeyShotsForEquivalentAlcoholAmount:numberOfBeers];
     
     NSString *beerText;
     
@@ -41,12 +56,12 @@
     
     NSString *whiskeyText;
     
-    if (numberOfWhiskeyGlassesForEquivalentAlcoholAmount == 1) {
+    if (glasses == 1) {
         whiskeyText = NSLocalizedString(@"shot", @"singular shot");
     } else {
         whiskeyText = NSLocalizedString(@"shots", @"plural of shot");
     }
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of whiskey.", nil), numberOfBeers, beerText, [self.beerPercentTextField.text floatValue], numberOfWhiskeyGlassesForEquivalentAlcoholAmount, whiskeyText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of whiskey.", nil), numberOfBeers, beerText, [self.beerPercentTextField.text floatValue], glasses, whiskeyText];
     self.resultLabel.text = resultText;
 }
 

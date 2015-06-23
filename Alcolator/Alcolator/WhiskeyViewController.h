@@ -10,4 +10,6 @@
 
 @interface WhiskeyViewController : ViewController
 
+- (float)numberOfWhiskeyShotsForEquivalentAlcoholAmount:(int)numberOfBeers;
+
 @end
