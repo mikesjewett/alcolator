@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27494FAD1B38716C0094BBE7 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27494FAC1B38716C0094BBE7 /* MainMenuViewController.m */; };
 		277A2FA61B2F4EE5008B7F38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 277A2FA51B2F4EE5008B7F38 /* main.m */; };
 		277A2FA91B2F4EE5008B7F38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 277A2FA81B2F4EE5008B7F38 /* AppDelegate.m */; };
 		277A2FAC1B2F4EE5008B7F38 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277A2FAB1B2F4EE5008B7F38 /* ViewController.m */; };
@@ -29,8 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27494FAB1B38716C0094BBE7 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		27494FAC1B38716C0094BBE7 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		277A2FA01B2F4EE5008B7F38 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277A2FA41B2F4EE5008B7F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277A2FA51B2F4EE5008B7F38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,8 +94,6 @@
 				277A2FA31B2F4EE5008B7F38 /* Supporting Files */,
 				277A2FCC1B32EFC3008B7F38 /* WhiskeyViewController.h */,
 				277A2FCD1B32EFC3008B7F38 /* WhiskeyViewController.m */,
-				27494FAB1B38716C0094BBE7 /* MainMenuViewController.h */,
-				27494FAC1B38716C0094BBE7 /* MainMenuViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -233,7 +228,6 @@
 				277A2FCE1B32EFC3008B7F38 /* WhiskeyViewController.m in Sources */,
 				277A2FA91B2F4EE5008B7F38 /* AppDelegate.m in Sources */,
 				277A2FA61B2F4EE5008B7F38 /* main.m in Sources */,
-				27494FAD1B38716C0094BBE7 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
