@@ -36,11 +36,7 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     
-    if ([self.navigationItem.title  isEqual: @"Wine"]) {
-        self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"%.2f Glasses of Wine", sender.value)];
-    } else if ([self.navigationItem.title  isEqual: @"Whiskey"]) {
-        self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"%.2f Shots of Whiskey", sender.value)];
-    }
+    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"%.0f Glasses of Wine", nil), sender.value];
     
     [self.beerPercentTextField resignFirstResponder];
 }
