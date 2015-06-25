@@ -14,21 +14,12 @@
 
 @implementation WhiskeyViewController
 
-- (IBAction)sliderValueDidChange:(UISlider *)sender {
-    NSLog(@"Slider value changed to %f", sender.value);
-    [self.beerPercentTextField resignFirstResponder];
-    
-    float glasses = [self numberOfWhiskeyShotsForEquivalentAlcoholAmount:sender.value];
-    
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) glasses]];
-}
-
--(float)numberOfWhiskeyShotsForEquivalentAlcoholAmount:(int)numberOfBeers {
+-(float)numberOfContainersForEquivalentAlcoholAmount:(int)numberOfDrinks {
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
     
     float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
     float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
-    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
+    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfDrinks;
     
     float ouncesInOneWhiskeyGlass = 1;  // a 1oz shot
     float alcoholPercentageOfWhiskey = 0.4;  // 40% is average
@@ -44,7 +35,7 @@
     
     int numberOfBeers = self.beerCountSlider.value;
     
-    float glasses = [self numberOfWhiskeyShotsForEquivalentAlcoholAmount:numberOfBeers];
+    float glasses = [self numberOfContainersForEquivalentAlcoholAmount:numberOfBeers];
     
     NSString *beerText;
     

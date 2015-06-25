@@ -37,16 +37,16 @@
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
     
-    float glasses = [self numberOfWineGlassesForEquivalentAlcoholAmount:sender.value];
+    float glasses = [self numberOfContainersForEquivalentAlcoholAmount:sender.value];
     
     [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) glasses]];
 }
 
--(float)numberOfWineGlassesForEquivalentAlcoholAmount:(int)numberOfBeers {
+-(float)numberOfContainersForEquivalentAlcoholAmount:(int)numberOfDrinks {
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
     float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
     float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
-    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
+    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfDrinks;
     // now, calculate the equivalent amount of wine...
     float ouncesInOneWineGlass = 5;  // wine glasses are usually 5oz
     float alcoholPercentageOfWine = 0.13;  // 13% is average
@@ -60,7 +60,7 @@
     // first, calculate how much alcohol is in all those beers...
     int numberOfBeers = self.beerCountSlider.value;
     
-    float glasses = [self numberOfWineGlassesForEquivalentAlcoholAmount:numberOfBeers];
+    float glasses = [self numberOfContainersForEquivalentAlcoholAmount:numberOfBeers];
     
     // decide whether to use "beer"/"beers" and "glass"/"glasses"
     NSString *beerText;
